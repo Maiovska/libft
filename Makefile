@@ -6,7 +6,7 @@
 #    By: hmaiovsk <hmaiovsk@student.42barcelona.co  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/04/27 14:42:17 by hmaiovsk          #+#    #+#              #
-#    Updated: 2026/04/28 17:41:19 by hmaiovsk         ###   ########.fr        #
+#    Updated: 2026/04/30 14:12:34 by hmaiovsk         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,6 +29,7 @@ SRCS			= ft_isalpha.c /
 			  ft_tolower.c/
 			  ft_strchr.c/
 			  ft_strrchr.c/
+			  ft_strncmp.c/
 all : $(NAME)
 
 $(NAME) : $(OBJS)

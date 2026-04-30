@@ -6,7 +6,7 @@
 /*   By: hmaiovsk <hmaiovsk@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/27 12:29:00 by hmaiovsk          #+#    #+#             */
-/*   Updated: 2026/04/28 17:41:52 by hmaiovsk         ###   ########.fr       */
+/*   Updated: 2026/04/30 14:13:44 by hmaiovsk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef LIBFT_H
@@ -28,4 +28,5 @@ int		ft_toupper(int c);
 int		ft_tolower(int c);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
+int		*ft_strncmp(const char *s1, const char *s2, size_t n);
 #endif

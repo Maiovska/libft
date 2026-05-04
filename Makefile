@@ -3,47 +3,52 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: hmaiovsk <hmaiovsk@student.42barcelona.co  +#+  +:+       +#+         #
+#    By: hmaiovsk <hmaiovsk@student.42barcelon      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2026/04/27 14:42:17 by hmaiovsk          #+#    #+#              #
-#    Updated: 2026/04/30 14:12:34 by hmaiovsk         ###   ########.fr        #
+#    Created: 2026/05/04 15:52:11 by hmaiovsk          #+#    #+#              #
+#    Updated: 2026/05/04 15:58:40 by hmaiovsk         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME			= libft.a
-CC				= cc
-CFLAGS			= -Wall -Wextra -Werror
-AR				= ar
-ARFLAGS			= -rcs
-SRCS			= ft_isalpha.c /
-			  ft_isdigit.c /
-			  ft_isalnum.c /
-			  ft_isascii.c /
-			  ft_isprint.c /
-				ft_strlen.c /
-			  ft_memset.c /
-			  ft_ft_bzero.c/
-			  ft_memcpy.c/
-			  ft_memmove.c/
-			  ft_toupper.c/
-			  ft_tolower.c/
-			  ft_strchr.c/
-			  ft_strrchr.c/
-			  ft_strncmp.c/
-all : $(NAME)
+NAME := libft.a
+CC := cc
+CFLAGS := -Wall -Wextra -Werror
+
+SRCS := ft_isalpha.c\
+		ft_isdigit.c\
+		ft_isalnum.c\
+		ft_isascii.c\
+		ft_isprint.c\
+		ft_strlen.c\
+		ft_memset.c\
+		ft_bzero.c\
+		ft_memcpy.c\
+		ft_memmove.c\
+		ft_toupper.c\
+		ft_tolower.c\
+		ft_strchr.c\
+		ft_strrchr.c\
+		ft_memchr.c\
+		ft_memcmp.c\
+
+OBJS := $(SRCS:.c=.o)
+
+.PHONY: all clean fclean re
+
+all: $(NAME)
+
+bonus: $(NAME)
 
 $(NAME) : $(OBJS)
-	$(AR) $(ARFLAGS) $(NAME) $(OBJS)
+	ar -rcs $(NAME) $(OBJS)
 
-$(OBJS) = %.o : %.c
-	$(CC) $(CFLAGS)  -c $< -o $@
+%.o: %.c Makefile libft.h
+	$(CC) $(CFLAGS) -c $< -o $@
 
-clean :
+clean:
 	rm -f $(OBJS)
 
-fclean : clean
+fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
-
-.PHONY: all clean fclean re 

@@ -6,13 +6,13 @@
 /*   By: hmaiovsk <hmaiovsk@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/27 13:29:42 by hmaiovsk          #+#    #+#             */
-/*   Updated: 2026/04/27 14:27:23 by hmaiovsk         ###   ########.fr       */
+/*   Updated: 2026/05/04 15:52:45 by hmaiovsk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isdigit(int c);
+int	ft_isdigit(int c)
 {
 	return (c >= '0' && c <= '9');
 }
